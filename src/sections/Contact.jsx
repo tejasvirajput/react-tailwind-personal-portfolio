@@ -86,13 +86,16 @@ export const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="py-25 relative overflow-hidden">
+    <section
+      id="contact"
+      className="relative w-full max-w-full overflow-hidden py-20 md:py-25"
+    >
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
@@ -110,8 +113,8 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
+        <div className="mx-auto grid w-full max-w-5xl min-w-0 grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="glass min-w-0 w-full max-w-full rounded-3xl border border-primary/30 p-5 sm:p-8 animate-fade-in animation-delay-300">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
@@ -129,7 +132,7 @@ export const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  className="block w-full min-w-0 max-w-full rounded-xl border border-border bg-surface px-4 py-3 outline-none transition-all focus:border-primary focus:ring-1 focus:ring-primary"
                 />
               </div>
 
@@ -150,7 +153,7 @@ export const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  className="block w-full min-w-0 max-w-full rounded-xl border border-border bg-surface px-4 py-3 outline-none transition-all focus:border-primary focus:ring-1 focus:ring-primary"
                 />
               </div>
 
@@ -168,8 +171,9 @@ export const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
+                  id="message"
                   placeholder="Your message..."
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                  className="block w-full min-w-0 max-w-full resize-none rounded-xl border border-border bg-surface px-4 py-3 outline-none transition-all focus:border-primary focus:ring-1 focus:ring-primary"
                 />
               </div>
 
@@ -191,27 +195,28 @@ export const Contact = () => {
 
               {submitStatus.type && (
                 <div
-                  className={`flex items-center gap-3
-                     p-4 rounded-xl ${
-                       submitStatus.type === "success"
-                         ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                         : "bg-red-500/10 border border-red-500/20 text-red-400"
-                     }`}
+                  className={`flex min-w-0 items-center gap-3 rounded-xl p-4 ${
+                    submitStatus.type === "success"
+                      ? "bg-green-500/10 border border-green-500/20 text-green-400"
+                      : "bg-red-500/10 border border-red-500/20 text-red-400"
+                  }`}
                 >
                   {submitStatus.type === "success" ? (
                     <CheckCircle className="w-5 h-5 flex-shrink-0" />
                   ) : (
                     <AlertCircle className="w-5 h-5 flex-shrink-0" />
                   )}
-                  <p className="text-sm">{submitStatus.message}</p>
+                  <p className="min-w-0 break-words text-sm">
+                    {submitStatus.message}
+                  </p>
                 </div>
               )}
             </form>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in animation-delay-400">
-            <div className="glass rounded-3xl p-8">
+          <div className="min-w-0 w-full space-y-6 animate-fade-in animation-delay-400">
+            <div className="glass w-full min-w-0 rounded-3xl border border-primary/30 p-5 sm:p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Contact Information
               </h3>
@@ -220,16 +225,19 @@ export const Contact = () => {
                   <a
                     key={i}
                     href={item.href}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                    className="group flex min-w-0 w-full items-center gap-3 rounded-xl p-3 transition-colors hover:bg-surface sm:gap-4 sm:p-4"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="w-5 h-5 text-primary" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
+                      <item.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <div className="text-sm text-muted-foreground">
                         {item.label}
                       </div>
-                      <div className="font-medium">{item.value}</div>
+
+                      <div className="break-words text-sm font-medium sm:text-base">
+                        {item.value}
+                      </div>
                     </div>
                   </a>
                 ))}
@@ -237,7 +245,7 @@ export const Contact = () => {
             </div>
 
             {/* Availability Card */}
-            <div className="glass rounded-3xl p-8 border border-primary/30">
+            <div className="glass w-full min-w-0 rounded-3xl border border-primary/30 p-5 sm:p-8">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="font-medium">Currently Available</span>
