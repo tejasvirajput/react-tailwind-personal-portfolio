@@ -1,16 +1,76 @@
-# React + Vite
+# Tejasvi Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern personal portfolio website built with React, Vite, and Tailwind-inspired styling. This portfolio highlights my work, skills, experience, and contact information in a clean and engaging layout.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Demo: https://your-portfolio-demo.netlify.app
 
-## React Compiler
+> Replace the URL above with your actual deployed portfolio link once it is live.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive personal portfolio layout
+- Hero section with introduction and CTA buttons
+- About section
+- Projects showcase
+- Experience timeline
+- Contact form integration
+- Clean, modern UI design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- CSS
+- EmailJS for contact form
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open the local preview in your browser.
+
+## Production Build
+
+```bash
+npm run build
+```
+
+## Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```bash
+src/
+  App.jsx
+  main.jsx
+  index.css
+  components/
+  layout/
+  sections/
+```
+
+## Contact
+
+For inquiries or collaboration opportunities, connect through the portfolio contact section or reach out via the project’s contact details.
+
+## License
+
+This project is open for personal and educational use.
