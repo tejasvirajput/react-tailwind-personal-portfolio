@@ -32,9 +32,9 @@ const projects = [
   {
     title: "Simon Says Game",
     description:
-      "An interactive memory-based game with dynamic sequences, increasing difficulty, high-score tracking, and a responsive interface.",
+      "A responsive memory game with dynamic sequences, multiple difficulty levels, sound effects, high-score tracking, pause and resume controls, and achievement milestones.",
     image: "/projects/project3.png",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
     link: "https://simon-says-beta-lyart.vercel.app/",
     github: "https://github.com/tejasvirajput/Simon-Says.git",
   },
