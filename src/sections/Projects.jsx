@@ -99,12 +99,16 @@ export const Projects = () => {
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <FaGithub className="w-5 h-5" />
@@ -145,7 +149,11 @@ export const Projects = () => {
 
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <a href="https://github.com/tejasvirajput">
+          <a
+            href="https://github.com/tejasvirajput"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <AnimatedBorderButton>
               View All Projects
               <ArrowUpRight className="w-5 h-5" />

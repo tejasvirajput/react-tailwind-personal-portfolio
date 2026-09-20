@@ -4,7 +4,7 @@ const socialLinks = [
   { icon: FaGithub, href: "https://github.com/tejasvirajput", label: "GitHub" },
   {
     icon: FaLinkedin,
-    href: "www.linkedin.com/in/tejasvirajput",
+    href: "https://linkedin.com/in/tejasvirajput",
     label: "LinkedIn",
   },
 ];
@@ -39,6 +39,8 @@ export const Footer = () => {
               <a
                 key={link.href}
                 href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
@@ -53,6 +55,8 @@ export const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
               >
                 <social.icon className="w-5 h-5" />
