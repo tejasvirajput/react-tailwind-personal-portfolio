@@ -4,7 +4,7 @@ A modern personal portfolio website built with React, Vite, and Tailwind-inspire
 
 ## Live Demo
 
-- Demo: https://your-portfolio-demo.netlify.app
+- Demo: https://tejasvi-portfolio.onrender.com
 
 > Replace the URL above with your actual deployed portfolio link once it is live.
 
